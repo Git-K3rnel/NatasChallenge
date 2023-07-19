@@ -1,6 +1,45 @@
 # NatasChallenge
 This is the solution to all Natas levels
 
+### Level 0 [(http://natas0.natas.labs.overthewire.org/)](http://natas0.natas.labs.overthewire.org/)
+```
+1.View the web page source
+2.You will find the natas1 password : g9D9cREhslqBKtcA2uocGHPfMZVzeFK6
+```
+
+### Level 1 [(http://natas1.natas.labs.overthewire.org/)](http://natas1.natas.labs.overthewire.org/)
+```
+1.use "view-source" to see the page source like this : view-source:http://natas1.natas.labs.overthewire.org/
+2.You will find the natas2 password : h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7
+```
+
+### Level 2 [(http://natas2.natas.labs.overthewire.org/)](http://natas2.natas.labs.overthewire.org/)
+```
+1.View the page source
+2.Go to location of the img tag : '<img src="files/pixel.png">'
+3.Go to files directory
+4.You will see the users.txt, open it
+5.You will see natas3 password : G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+```
+
+### Level 3 [(http://natas3.natas.labs.overthewire.org/)](http://natas3.natas.labs.overthewire.org/)
+```
+1.View the page source, and you see the comment mentioning "No more information leaks!! Not even Google will find it this time..."
+2.From the above sentence we understand that google can not find it (it means google robots)
+3.Go to robots.txt and you see the "Disallow: /s3cr3t/"
+4.Go to "/s3cr3t/" directory and you see the users.txt, open it
+5.You will find the natas4 password : tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+```
+
+### Level 4 [(http://natas4.natas.labs.overthewire.org/)](http://natas4.natas.labs.overthewire.org/)
+```
+1.The site says you should visit it from a special address
+2.Just set the "referer" header with cURL
+3.Base64 encode the natas4 credentials -> natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm and put it in "Authorization header"
+4.Curl like this : curl http://natas4.natas.labs.overthewire.org/ -H "Authorization: basic bmF0YXM0OnRLT2NKSWJ6TTRsVHM4aGJDbXpuNVpyNDQzNGZHWlFt" -H "referer: http://natas5.natas.labs.overthewire.org/"
+5.You will recieve the natas5 password : Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+```
+
 ### Level 5 [(http://natas5.natas.labs.overthewire.org/)](http://natas5.natas.labs.overthewire.org/)
 ```
 1.Curl like this : curl http://natas5.natas.labs.overthewire.org/index.php -H "Authorization: Basic bmF0YXM1OlowTnNydElrSm9LQUxCQ0xpNWVxRmZjUk44MkF1Mm9E" -H "Cookie: loggedin=1"
